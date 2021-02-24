@@ -1,0 +1,67 @@
+{
+  'author': '古明地盆',
+  'uri': 'http://www.cnblogs.com/traditional/',
+  'updated': '2021-02-24T05:09:01Z',
+  'articles': [
+    {
+      'title': '《深度剖析CPython解释器》31. Python 和 C / C++ 联合编程 - 古明地盆',
+      'summary': '楔子 Python 和 C / C++ 混合编程已经屡见不鲜了，那为什么要将这两种语言结合起来呢？或者说，这两种语言混合起来能给为我们带来什么好处呢？首先，Python 和 C / C++ 联合，无非两种情况。 1. C / C++ 为主导的项目中引入 Python; 2. Python 为主导的项',
+      'url': 'http://www.cnblogs.com/traditional/p/14398434.html',
+      'updated': '2021-02-11T17:56:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》30. 源码解密内置函数 iter、next - 古明地盆',
+      'summary': '楔子 这次我们来看看 iter 和 next 这两个内置函数的用法，我们知道 iter 是将一个可迭代对象变成一个迭代器，next 是将迭代器里的值一步一步迭代出来。 lst = [1, 2, 3] it = iter(lst) print(it) # <list_iterator object a',
+      'url': 'http://www.cnblogs.com/traditional/p/14040093.html',
+      'updated': '2020-11-25T16:39:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》29. 源码解密 map、filter、zip 底层实现，对比列表解析式 - 古明地盆',
+      'summary': '楔子 Python 现在如此流行，拥有众多开源、高质量的第三方库是一个重要原因，不过 Python 的简单、灵巧、容易上手也是功不可没的，而其背后的内置函数（类）则起到了很大的作用。举个栗子： numbers = [1, 2, 3, 4, 5] # 将里面每一个元素都加1 print(list(ma',
+      'url': 'http://www.cnblogs.com/traditional/p/14038011.html',
+      'updated': '2020-11-25T11:40:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》28. Python内存管理与垃圾回收(第二部分)：源码解密Python中的垃圾回收机制 - 古明地盆',
+      'summary': '楔子 现在绝大部分的语言都实现了垃圾回收机制，这其中也包括Python，而不同的语言采用的垃圾回收算法也各不相同。那么，常见的垃圾回收算法都有哪些呢？ 引用计数法(reference count): 记录对象的被引用次数, 引用计数降为0时回收 标记-清除法(mark-sweep): 从根集合触发,',
+      'url': 'http://www.cnblogs.com/traditional/p/13698244.html',
+      'updated': '2020-09-19T15:55:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》27. Python内存管理与垃圾回收(第一部分)：深度剖析Python内存管理架构、内存池的实现原理 - 古明地盆',
+      'summary': '楔子 内存管理，对于Python这样的动态语言来说是非常重要的一部分，它在很大程度上决定了Python的执行效率，因为Python在运行中会创建和销毁大量的对象，这些都涉及内存的管理，因此精湛的内存管理技术是确保内存使用效率的关键。 此外，我们知道Python还是一门提供了垃圾回收机制(GC, ga',
+      'url': 'http://www.cnblogs.com/traditional/p/13695846.html',
+      'updated': '2020-09-19T04:58:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》26. 解密Python中的多线程(第二部分)：源码剖析Python线程的创建、销毁、调度，以及GIL的实现原理 - 古明地盆',
+      'summary': '初见Python的_thread模块 下面我们来说一下Python中线程的创建，我们知道在创建多线程的时候会使用threading这个标准库，这个库是以一个py文件存在的形式存在的，不过这个模块依赖于_thread模块，我们来看看它长什么样子。 _thread是真正用来创建线程的模块，这个模块是由C',
+      'url': 'http://www.cnblogs.com/traditional/p/13655426.html',
+      'updated': '2020-09-11T19:54:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》25. 解密Python中的多线程(第一部分)：初识GIL、以及多个线程之间的调度机制 - 古明地盆',
+      'summary': '楔子 这次我们来说一下Python中的多线程，在上篇博客中我们说了Python的线程，我们说Python中的线程是对OS线程进行了一个封装，并提供了一个线程状态(PyThreadState)对象，来记录OS线程的一些状态信息。 那什么是多线程呢？首先线程是操作系统调度cpu工作的最小单元，同理进程则',
+      'url': 'http://www.cnblogs.com/traditional/p/13649359.html',
+      'updated': '2020-09-10T17:30:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》24. Python运行时环境的初始化、源码分析Python解释器在启动时都做了哪些事情？ - 古明地盆',
+      'summary': '楔子 我们之前分析了Python的核心--字节码、以及虚拟机的剖析工作，但这仅仅只是一部分，而其余的部分则被遮在了幕后。记得我们在分析虚拟机的时候，曾这么说过： 当Python启动后，首先会进行 "运行时环境" 的初始化，而关于 "运行时环境" 的初始化是一个非常复杂的过程。并且 "运行时环境" 和',
+      'url': 'http://www.cnblogs.com/traditional/p/13642194.html',
+      'updated': '2020-09-09T13:39:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》23. 剖析Python中模块的导入机制、Python是如何加载模块的 - 古明地盆',
+      'summary': '楔子 上一篇我们介绍了生成器，本来这里应该介绍协程的，但是大致阅读了一下，感觉如果从源码的角度来介绍协程的话，工作量太大。而且个人精力有限，所以推荐我写的这一篇博客：https://www.cnblogs.com/traditional/p/11828780.html，是用来介绍asyncio的，当',
+      'url': 'http://www.cnblogs.com/traditional/p/13620603.html',
+      'updated': '2020-09-05T22:30:00Z'
+    },
+    {
+      'title': '《深度剖析CPython解释器》22. 解密Python中的生成器对象，从字节码的角度分析生成器的底层实现以及执行逻辑 - 古明地盆',
+      'summary': '楔子 下面我们来聊一聊Python中的生成器，它是我们理解后面协程的基础，生成器的话，估计大部分人在写程序的时候都想不到用。但是一旦用好了，确实能给程序带来性能上的提升，那么我们就来看一看吧。 生成器 基本用法 我们知道，一个函数如果它的内部出现了yield关键字，那么它就不再是普通的函数了，而是一',
+      'url': 'http://www.cnblogs.com/traditional/p/13620438.html',
+      'updated': '2020-09-05T16:55:00Z'
+    }
+  ]
+}
