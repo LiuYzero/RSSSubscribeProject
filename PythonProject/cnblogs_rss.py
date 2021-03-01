@@ -7,15 +7,15 @@ from xmltodict3 import XmlTextToDict
 url = "https://feed.cnblogs.com/blog/u/408549/rss/"
 
 def get_rss_content_from_url(url):
-  '''
+  """
   从cnblogs网站的rss链接中解析订阅列表
-  :param url: cnblogs's rss link
+  :param url: cnblogs is rss link
   :return: rss_obj
-  '''
+  """
   response = requests.get(url=url)
   if response.status_code != 200:
     return {}
-  json = XmlTextToDict(response.content, ignore_namespace=True).get_dict()
+  json = XmlTextToDict(response.text, ignore_namespace=True).get_dict()
   # print(result)
 
   result = json["feed"]
