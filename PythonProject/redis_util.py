@@ -63,3 +63,24 @@ def get_rss_link_db_key():
         if redis:
             redis.close()
         return []
+
+def get_rss_link(key):
+    """
+    获取RSSSubscribeLink下具体rss_link
+    :param key: rss的作者，即key
+    :return: key对应的rss_link
+    """
+    try:
+        redis = StrictRedis(host=host, port=port, db=db, password=password)
+        obj = bytes2string(redis.hget(rss_link_db, string2bytes(key)))
+        obj = json.loads(obj)
+        # rss_link = {
+        #     "author":key,
+        #     "url":obj['url']
+        # }
+        return obj
+    except :
+        print ("get_rss_link_db_key throw exception, please check it." )
+        if redis:
+            redis.close()
+        return {}
