@@ -42,6 +42,6 @@ def get_rss_content_from_linuxcn(url):
         "updated": updated,
         "articles": articles
     }
-    print(linuxcn_rss)
-    # return linuxcn_rss
-get_rss_content_from_linuxcn(url)
+    # print(linuxcn_rss)
+    return linuxcn_rss
+# get_rss_content_from_linuxcn(url)

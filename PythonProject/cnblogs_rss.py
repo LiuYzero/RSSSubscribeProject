@@ -6,7 +6,7 @@ from xmltodict3 import XmlTextToDict
 
 url = "https://feed.cnblogs.com/blog/u/408549/rss/"
 
-def get_rss_content_from_url(url):
+def get_rss_content_from_cnblogs(url):
   """
   从cnblogs网站的rss链接中解析订阅列表
   :param url: cnblogs is rss link
@@ -39,6 +39,6 @@ def get_rss_content_from_url(url):
   return cnblogs_rss
 
 
-article = get_rss_content_from_url(url)
-print (article)
+article = get_rss_content_from_cnblogs(url)
+# print (article)
 
