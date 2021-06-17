@@ -1,0 +1,5 @@
+---
+- hosts: micro_services
+  roles:
+    - role: rss_redis
+

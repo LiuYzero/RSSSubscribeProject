@@ -1,0 +1,3 @@
+microservice_destpath: /home/liuyang/micro_service/rss_redis
+microservice_fullname: rss_redis-1.0.0-SNAPSHOT.jar
+project_path: /d/x/idea/rss_redis

@@ -1,0 +1,27 @@
+server:
+  port: 16064
+
+spring:
+  application:
+    name: rss_redis
+  cache:
+    type: redis
+  redis:
+    database: 0
+    host: 192.168.1.113
+    port: 6379
+    password: redispass
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 10s
+        max-idle: 8
+        min-idle: 0
+    lettuce:
+      shutdown-timeout: 1000ms
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.113:8761/eureka
+  instance:
+    prefer-ip-address: true

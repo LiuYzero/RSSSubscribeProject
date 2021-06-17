@@ -1,0 +1,2 @@
+[micro_services]
+192.168.1.102 ansible_ssh_host=192.168.1.102 ansible_ssh_user=liuyang ansible_ssh_password=liuyang

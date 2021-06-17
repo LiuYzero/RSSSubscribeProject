@@ -1,0 +1,44 @@
+
+---
+- name: debug
+  debug: msg="{{ microservice_destpath }}"
+
+- name: mkdir bak
+  file:
+    path: "{{ microservice_destpath }}/bak"
+    state: directory
+
+- name: upload  restart microservice script
+  template:
+    src: restart_microservice.sh
+    dest: "{{ microservice_destpath }}/stop.sh"
+    mode: 0755
+
+- name: upload  stop microservice script
+  template:
+    src: stop_microservice.sh
+    dest: "{{ microservice_destpath }}/stop.sh"
+    mode: 0755
+
+- name: execute stop.sh
+  shell: /bin/bash {{ microservice_destpath }}/stop.sh
+
+- name: copy {{ microservice_fullname }} to {{microservice_destpath}}
+  copy:
+    src: /mnt{{ project_path }}/target/{{ microservice_fullname }}
+    dest: "{{microservice_destpath}}/{{ microservice_fullname }}"
+    backup: yes
+    force: yes    
+
+
+- name: upload  start microservice script to {{ microservice_destpath }}
+  template:
+    src: start_microservice.sh
+    dest: "{{ microservice_destpath }}/start.sh"
+    mode: 0755
+
+- name: execute {{ microservice_destpath }}/start.sh
+  shell: /bin/bash {{ microservice_destpath }}/start.sh
+
+
+
